@@ -4,9 +4,7 @@ namespace CoreReact.Controllers;
 public class UserController : ControllerBase
 {
     public readonly IUserService userService;
-    public UserController(IUserService userService) {
-        this.userService = userService;
-    }
+    public UserController(IUserService userService) {this.userService = userService;}
     [HttpPost]
     public async Task<IActionResult> addUser(UserDTO user)
     {
